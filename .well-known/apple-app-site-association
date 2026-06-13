@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "REPLACE_WITH_APPLE_TEAMID.app.maksab.mobile",
+        "appID": "REPLACE_WITH_APPLE_TEAMID.app.yallamaksab.mobile",
         "paths": ["/branch/*", "/deal/*"]
       }
     ]
