@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>مكسب · افتح في التطبيق</title>
+  <title>يلا مكسب · افتح في التطبيق</title>
   <style>
     :root { --coral:#D85A30; --charcoal:#1A1A1A; --stone:#F1EFE8; --muted:#6B655C; }
     * { box-sizing:border-box; }
@@ -14,7 +14,7 @@
       display:flex; align-items:center; justify-content:center; padding:32px 24px; text-align:center;
     }
     .card { max-width:420px; width:100%; }
-    .mark { font-size:48px; font-weight:800; margin:0; }
+    .mark { font-size:clamp(32px,11vw,46px); font-weight:800; margin:0; }
     .word { color:var(--muted); font-size:13px; letter-spacing:3px; margin:6px 0 28px; }
     h1 { font-size:22px; margin:0 0 10px; line-height:1.4; }
     p { font-size:15px; color:var(--muted); line-height:1.7; margin:0 0 24px; }
@@ -29,16 +29,16 @@
 </head>
 <body>
   <main class="card">
-    <p class="mark">مكسب</p>
-    <p class="word">MAKSAB</p>
-    <h1 id="title">افتح هذا الرابط في تطبيق مكسب</h1>
+    <p class="mark">يلا مكسب</p>
+    <p class="word">YALLA MAKSAB</p>
+    <h1 id="title">افتح هذا الرابط في تطبيق يلا مكسب</h1>
     <p id="sub">إذا كان التطبيق مثبّتاً على جهازك، اضغط الزر لفتحه. وإن لم يكن، حمّل التطبيق أولاً.</p>
     <a class="btn primary" id="openApp" href="#">افتح في التطبيق</a>
     <a class="btn ghost" id="getApp" href="#">ليس لديّ التطبيق — كيف أحصل عليه؟</a>
   </main>
 
   <script>
-    // The Maksab app registers https://maksab.link/branch/* and /deal/* as Android
+    // The Yalla Maksab app registers https://maksab.link/branch/* and /deal/* as Android
     // App Links. When the verified app is installed, Android opens it directly and
     // this page never loads. This fallback is for: (a) the app isn't installed, or
     // (b) it's installed but link-verification hasn't completed yet — in which case
@@ -53,9 +53,11 @@
 
     // Tailor the copy to branch vs deal.
     if (path.indexOf("/deal/") === 0) {
-      document.getElementById("title").textContent = "افتح هذا العرض في تطبيق مكسب";
+      document.getElementById("title").textContent = "افتح هذا العرض في تطبيق يلا مكسب";
     } else if (path.indexOf("/branch/") === 0) {
-      document.getElementById("title").textContent = "افتح هذا المتجر في تطبيق مكسب";
+      document.getElementById("title").textContent = "افتح هذا المتجر في تطبيق يلا مكسب";
+    } else if (path.indexOf("/join/") === 0) {
+      document.getElementById("title").textContent = "انضم إلى فريق المتجر في تطبيق يلا مكسب";
     }
 
     document.getElementById("openApp").setAttribute("href", schemeUrl);
