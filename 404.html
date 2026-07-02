@@ -44,9 +44,10 @@
     // (b) it's installed but link-verification hasn't completed yet — in which case
     // the custom-scheme button still opens it.
 
-    // TODO: set this to the real download destination once the app is published
-    // (Play Store listing) or to wherever the pilot APK is hosted.
-    var DOWNLOAD_URL = "/";
+    // Where non-installed users go to get the app: the yallamaksab.com download
+    // page (serves the current release APK + its SHA-256). Points here rather than a
+    // raw release asset so new releases need no edit. Update only if the download moves.
+    var DOWNLOAD_URL = "https://yallamaksab.com";
 
     var path = window.location.pathname || "/";          // e.g. "/branch/123"
     var schemeUrl = "maksab://" + path.replace(/^\/+/, ""); // -> "maksab://branch/123"
