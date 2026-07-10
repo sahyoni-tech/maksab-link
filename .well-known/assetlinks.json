@@ -15,7 +15,8 @@
       "namespace": "android_app",
       "package_name": "app.yallamaksab.mobile",
       "sha256_cert_fingerprints": [
-        "07:7D:CB:76:CD:D8:7B:45:A7:CF:57:84:68:76:B6:15:CB:B5:AB:44:4B:7D:65:D5:D0:98:37:5A:6D:D5:46:10"
+        "07:7D:CB:76:CD:D8:7B:45:A7:CF:57:84:68:76:B6:15:CB:B5:AB:44:4B:7D:65:D5:D0:98:37:5A:6D:D5:46:10",
+        "2F:74:CD:8C:CE:48:8F:1C:8D:41:9E:DB:48:E1:FC:E2:58:22:8A:7F:6E:E2:D4:42:74:C9:29:8D:5B:C0:36:47"
       ]
     }
   }
