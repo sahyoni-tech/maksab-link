@@ -3,8 +3,8 @@
     "apps": [],
     "details": [
       {
-        "appID": "REPLACE_WITH_APPLE_TEAMID.app.yallamaksab.mobile",
-        "paths": ["/branch/*", "/deal/*"]
+        "appID": "Q5NK6W9NHZ.app.yallamaksab.mobile",
+        "paths": ["/branch/*", "/deal/*", "/join/*"]
       }
     ]
   }
