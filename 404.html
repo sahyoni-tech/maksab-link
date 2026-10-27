@@ -39,15 +39,16 @@
 
   <script>
     // The Yalla Maksab app registers https://maksab.link/branch/* and /deal/* as Android
-    // App Links. When the verified app is installed, Android opens it directly and
+    // App Links and iOS universal links. When the app is installed, the phone opens it directly and
     // this page never loads. This fallback is for: (a) the app isn't installed, or
     // (b) it's installed but link-verification hasn't completed yet — in which case
     // the custom-scheme button still opens it.
 
-    // Where non-installed users go to get the app: the yallamaksab.com download
-    // page (serves the current release APK + its SHA-256). Points here rather than a
-    // raw release asset so new releases need no edit. Update only if the download moves.
-    var DOWNLOAD_URL = "https://yallamaksab.com";
+    // Where non-installed users go to get the app: yallamaksab.com/get, which sends
+    // iPhones to the App Store, Android to Google Play, and any phone in Syria (and
+    // desktops) to the download section with the current APK + its SHA-256. Points
+    // here rather than a store or release asset so nothing here changes per release.
+    var DOWNLOAD_URL = "https://yallamaksab.com/get";
 
     var path = window.location.pathname || "/";          // e.g. "/branch/123"
     var schemeUrl = "maksab://" + path.replace(/^\/+/, ""); // -> "maksab://branch/123"
